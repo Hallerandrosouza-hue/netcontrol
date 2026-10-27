@@ -73,21 +73,12 @@
 
         <!-- Buscador de Cursos Funcional com GET para cursos.html -->
         <div class="hero-finder-card">
-          <span class="finder-label">🔍 O que você quer aprender hoje?</span>
-          <form action="cursos.html" method="GET" class="finder-form" id="heroFinderForm">
-            <input type="search" name="q" id="finderQuery" class="finder-input" placeholder="O que você quer aprender hoje? (Ex: Excel, IA, Python, Design...)" aria-label="Buscar curso">
-            <select name="cat" id="finderCategory" class="finder-select" aria-label="Selecionar categoria">
-              <option value="">Todas as áreas (+200 cursos)</option>
-              <option value="essencial">Informática & Tecnologia</option>
-              <option value="excel">Excel & Power BI</option>
-              <option value="design">Design & Criação Digital</option>
-              <option value="programacao">Programação, Web & Apps</option>
-              <option value="ia">Inteligência Artificial</option>
-              <option value="administracao">Gestão & Negócios</option>
-              <option value="manutencao">Hardware & Redes</option>
-              <option value="kids">Kids & Melhor Idade</option>
-            </select>
-            <button type="submit" class="btn btn-primary">Buscar Curso →</button>
+          <form action="cursos.html" method="GET" class="hero-search-form" role="search">
+            <div class="search-input-wrapper">
+              <span class="search-icon" aria-hidden="true">🔍</span>
+              <input type="search" name="q" placeholder="O que você quer aprender hoje? (Ex: Excel, IA, Assistente Administrativo...)" aria-label="Buscar curso" required>
+              <button type="submit" class="btn-search">Buscar</button>
+            </div>
           </form>
           <div class="finder-tags">
             <span>Mais procurados:</span>
