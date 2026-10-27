@@ -30,24 +30,8 @@
 
   // If header is missing from static HTML, inject as fallback
   if (!document.getElementById('siteHeader')) {
-    const topbarHTML = `
+    const headerHTML = `
       <a class="skip" href="#main">Ir para o conteúdo principal</a>
-      <div class="topbar">
-        <div class="container">
-          <div class="topbar-left">
-            <span class="topbar-badge">27 ANOS DE TRADIÇÃO</span>
-            <span>📍 Piauí · Bahia · Maranhão — Desde 1999 capacitando pessoas com inovação</span>
-          </div>
-          <div class="topbar-right">
-            <a href="${WA_DEFAULT}" target="_blank" rel="noopener">
-              <span>💬 WhatsApp:</span> <strong>(89) 99400-2815</strong>
-            </a>
-            <a href="${IG}" target="_blank" rel="noopener">
-              <span>📸 Instagram:</span> <strong>@netcontroloficial</strong>
-            </a>
-          </div>
-        </div>
-      </div>
       <header id="siteHeader">
         <div class="container nav">
           ${logoHTML}
@@ -61,7 +45,7 @@
         </div>
       </header>
     `;
-    document.body.insertAdjacentHTML('afterbegin', topbarHTML);
+    document.body.insertAdjacentHTML('afterbegin', headerHTML);
   }
 
   const mainEl = document.querySelector('main') || document.querySelector('section');
