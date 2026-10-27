@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mais de 200 Cursos Profissionalizantes | Net Control Informática</title>
+  <meta name="description" content="Explore o catálogo de mais de 200 cursos da Net Control Informática: informática, Excel, design, programação, inteligência artificial, marketing, administração e muito mais.">
+  <meta name="theme-color" content="#0A192F">
+  <link rel="icon" href="assets/img/emblema-27.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="cursos">
+
+<main>
+  <section class="page-hero reveal">
+    <div class="container">
+      <span class="eyebrow" style="color:var(--green)">Catálogo Completo</span>
+      <h1>Mais de <span style="color:var(--green)">200 Cursos</span> para o seu Futuro</h1>
+      <p>Do básico ao avançado, de Informática Essencial a Inteligência Artificial e Gestão. Encontre o curso perfeito para seus objetivos profissionais com aulas 100% práticas e certificado de peso.</p>
+    </div>
+  </section>
+
+  <!-- Destaques -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Mais Procurados</span>
+        <h2>Cursos em Grande Destaque no Mercado</h2>
+      </div>
+      <div class="categories-grid" id="featuredCoursesGrid" style="grid-template-columns:repeat(3,1fr)"></div>
+    </div>
+  </section>
+
+  <!-- Catálogo Interativo com Filtros -->
+  <section class="bg-soft">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Pesquise e Escolha</span>
+        <h2>Encontre o Curso Ideal para Você</h2>
+        <p>Utilize a barra de busca ou filtre pelas categorias. Clique em “Quero saber mais” para falar diretamente com nossa equipe no WhatsApp.</p>
+      </div>
+
+      <div class="toolbar reveal">
+        <input id="q" type="search" placeholder="🔍 Buscar por nome do curso (ex: Excel, Python, Canva, Farmácia...)" aria-label="Buscar curso">
+        <span class="count" id="count"></span>
+      </div>
+
+      <!-- Filter chips with 3D icons -->
+      <div class="chips reveal" id="chips"></div>
+
+      <!-- Courses List Container -->
+      <div id="catalogo"></div>
+
+      <div style="margin-top:40px;text-align:center" class="reveal">
+        <p style="color:var(--text-muted);font-size:1.05rem">Não encontrou o que procura? Nossa equipe monta uma trilha personalizada para você.</p>
+        <div style="margin-top:14px">
+          <a class="btn btn-primary" data-wa="Olá! Estou procurando um curso específico na Net Control e gostaria de orientação.">
+            Falar com um Consultor Pedagógico
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section style="padding-top:0">
+    <div class="container">
+      <div class="cta reveal">
+        <h2>Dúvida sobre qual curso escolher?</h2>
+        <p>Converse gratuitamente com nossos especialistas. Ajudamos você a definir o melhor caminho de acordo com seu perfil e metas de renda.</p>
+        <div class="actions">
+          <a class="btn btn-primary btn-lg" data-wa="Olá! Gostaria de uma consultoria gratuita para escolher meu curso na Net Control.">
+            Quero Ajuda para Escolher
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="js/media.js"></script>
+<script src="js/cursos-data.js"></script>
+<script src="js/main.js"></script>
+<script>
+  // Render Featured Courses
+  const featGrid = document.getElementById('featuredCoursesGrid');
+  if (featGrid && window.DESTAQUES) {
+    featGrid.innerHTML = DESTAQUES.map((c, i) => `
+      <article class="feat-card reveal">
+        <div class="thumb-wrap">
+          <img src="${c.img || MEDIA.curso[i] || 'assets/img/curso-01.jpg'}" alt="${c.nome}" loading="lazy">
+          <span class="feat-badge">${c.badge || 'Destaque'}</span>
+        </div>
+        <div class="card-body">
+          <div class="course-meta">
+            <span>⏱ ${c.horas}</span>
+            <span>🎯 ${c.nivel}</span>
+          </div>
+          <h3>${c.nome}</h3>
+          <p>${c.txt}</p>
+          <a class="btn btn-primary btn-sm" data-wa="Olá! Quero saber mais sobre o curso ${c.nome} na Net Control.">
+            Quero Me Matricular
+          </a>
+        </div>
+      </article>
+    `).join('');
+    NC.bind(featGrid);
+  }
+
+  // Handle URL query parameters (e.g. from hero finder)
+  const urlParams = new URLSearchParams(window.location.search);
+  const initialQuery = urlParams.get('q') || '';
+  const initialCat = urlParams.get('cat') || '';
+
+  const total = CATEGORIAS.reduce((acc, cur) => acc + cur.cursos.length, 0);
+  const chipsContainer = document.getElementById('chips');
+  const catContainer = document.getElementById('catalogo');
+  const searchInput = document.getElementById('q');
+  const countEl = document.getElementById('count');
+
+  if (initialQuery) {
+    searchInput.value = initialQuery;
+  }
+
+  let activeCat = initialCat || 'todos';
+
+  // Build filter chips with 3D icons
+  chipsContainer.innerHTML = `
+    <button class="chip ${activeCat === 'todos' ? 'on' : ''}" data-id="todos">
+      <span>Todos</span>
+      <small>${total}</small>
+    </button>
+  ` + CATEGORIAS.map(c => `
+    <button class="chip ${activeCat === c.id ? 'on' : ''}" data-id="${c.id}">
+      <img src="${c.iconeImg}" class="chip-icon" alt="">
+      <span>${c.nome}</span>
+      <small>${c.cursos.length}</small>
+    </button>
+  `).join('');
+
+  function renderCatalog() {
+    const term = searchInput.value.trim().toLowerCase();
+    let totalFound = 0;
+    let html = '';
+
+    CATEGORIAS.forEach(cat => {
+      if (activeCat !== 'todos' && activeCat !== cat.id) return;
+
+      const filtered = cat.cursos.filter(item => 
+        !term || item.toLowerCase().includes(term) || cat.nome.toLowerCase().includes(term)
+      );
+
+      if (!filtered.length) return;
+      totalFound += filtered.length;
+
+      html += `
+        <div class="cat-title" id="${cat.id}">
+          <div class="cat-icon"><img src="${cat.iconeImg}" alt="${cat.nome}"></div>
+          <h3>${cat.nome}</h3>
+        </div>
+        <p class="cat-desc">${cat.desc}</p>
+        <div class="cgrid">
+          ${filtered.map(name => `
+            <article class="course-card-catalog">
+              <div>
+                <span class="cat-label">${cat.nome}</span>
+                <h4>${name}</h4>
+              </div>
+              <a class="action-link" data-wa="Olá! Gostaria de saber valores, horários e detalhes do curso ${name} na Net Control.">
+                Quero saber mais →
+              </a>
+            </article>
+          `).join('')}
+        </div>
+      `;
+    });
+
+    catContainer.innerHTML = html || `
+      <div style="text-align:center;padding:50px 20px;background:var(--white);border-radius:var(--radius);border:1px solid var(--border)">
+        <h3 style="margin-bottom:10px">Nenhum curso encontrado com essa busca</h3>
+        <p style="color:var(--text-muted);margin-bottom:20px">Tente buscar por outro termo ou converse agora com nossa equipe no WhatsApp.</p>
+        <a class="btn btn-primary" data-wa="Olá! Estou procurando um curso na Net Control que não encontrei no site.">Falar no WhatsApp</a>
+      </div>
+    `;
+
+    countEl.textContent = `${totalFound} curso${totalFound === 1 ? '' : 's'} encontrado${totalFound === 1 ? '' : 's'}`;
+    NC.bind(catContainer);
+  }
+
+  chipsContainer.addEventListener('click', e => {
+    const chip = e.target.closest('.chip');
+    if (!chip) return;
+    activeCat = chip.dataset.id;
+    chipsContainer.querySelectorAll('.chip').forEach(c => c.classList.toggle('on', c === chip));
+    renderCatalog();
+  });
+
+  searchInput.addEventListener('input', renderCatalog);
+
+  // Check URL hash
+  const hash = window.location.hash.slice(1);
+  if (hash && CATEGORIAS.some(c => c.id === hash)) {
+    activeCat = hash;
+    chipsContainer.querySelectorAll('.chip').forEach(c => c.classList.toggle('on', c.dataset.id === hash));
+  }
+
+  renderCatalog();
+
+  if (hash || initialQuery) {
+    setTimeout(() => {
+      catContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 400);
+  }
+</script>
+</body>
+</html>
