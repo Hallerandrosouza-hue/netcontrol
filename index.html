@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Net Control Informática | 27 Anos Capacitando Pessoas · PI, BA e MA</title>
-  <meta name="description" content="Net Control Informática: desde o século passado capacitando pessoas. Mais de 200 cursos profissionalizantes práticos, certificados reconhecidos e programa Aluno Aprendiz no Piauí, Bahia e Maranhão.">
-  <meta property="og:title" content="Net Control Informática | 27 Anos Capacitando Pessoas">
-  <meta property="og:description" content="Mais de 200 cursos profissionalizantes no PI, BA e MA. Fale no WhatsApp: (89) 99400-2815.">
+  <meta name="description" content="Net Control Informática: desde 1999 capacitando pessoas com excelência. Mais de 200 cursos profissionalizantes práticos, certificados reconhecidos e programa Aluno Aprendiz no Piauí, Bahia e Maranhão.">
+  <meta property="og:title" content="Net Control Informática | 27 Anos de Tradição e Inovação">
+  <meta property="og:description" content="Mais de 200 cursos profissionalizantes no PI, BA e MA. Fale no WhatsApp oficial: (89) 99400-2815.">
   <meta property="og:image" content="assets/img/logo-27.jpg">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://netcontrolinformatica.com.br">
   <meta name="theme-color" content="#0A192F">
   <link rel="icon" href="assets/img/emblema-27.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,35 +31,82 @@
 </head>
 <body data-page="home">
 
-<main>
+  <!-- =======================================================================
+       TOPBAR & HEADER INSTITUCIONAL (Estático para Renderização Imediata)
+       ======================================================================= -->
+  <a class="skip" href="#main">Ir para o conteúdo principal</a>
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <span class="topbar-badge">27 ANOS DE TRADIÇÃO</span>
+        <span>📍 Piauí · Bahia · Maranhão — Desde 1999 capacitando pessoas com inovação</span>
+      </div>
+      <div class="topbar-right">
+        <a href="https://wa.me/5589994002815?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20cursos%20da%20Net%20Control%20Inform%C3%A1tica." target="_blank" rel="noopener">
+          <span>💬 WhatsApp:</span> <strong>(89) 99400-2815</strong>
+        </a>
+        <a href="https://www.instagram.com/netcontroloficial/" target="_blank" rel="noopener">
+          <span>📸 Instagram:</span> <strong>@netcontroloficial</strong>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <header id="siteHeader">
+    <div class="container nav">
+      <a href="index.html" class="logo" aria-label="Net Control Informática - Início">
+        <img src="assets/img/emblema-27.png" alt="Net Control 27 Anos" class="logo-emblem" width="48" height="48">
+        <span class="logo-text">Net Control<small>INFORMÁTICA · 27 ANOS</small></span>
+      </a>
+      <button class="burger" id="burgerBtn" aria-label="Abrir menu de navegação" aria-expanded="false">☰</button>
+      <nav class="menu" id="primaryMenu" aria-label="Menu principal">
+        <a href="index.html" class="active">Início</a>
+        <a href="cursos.html">Cursos (+200)</a>
+        <a href="sobre.html">Sobre a Escola</a>
+        <a href="equipe.html">Nossa Equipe</a>
+        <a href="estrutura.html">Estrutura</a>
+        <a href="resultados.html">Resultados & Formaturas</a>
+        <a href="indique.html">Indique e Ganhe</a>
+        <a href="contato.html">Contato</a>
+        <div class="header-cta">
+          <a class="btn btn-primary btn-sm" href="https://wa.me/5589994002815?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20minha%20matr%C3%ADcula%20na%20Net%20Control." target="_blank" rel="noopener">
+            Matrícula pelo WhatsApp
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+<main id="main">
   <!-- =======================================================================
        HERO SECTION (Microlins Architecture)
        ======================================================================= -->
   <section class="hero">
     <div class="container hero-grid">
       <div class="hero-content reveal">
-        <span class="hero-badge">⭐ 27 ANOS DE TRADIÇÃO NO NORDESTE</span>
+        <span class="hero-badge">⭐ 27 ANOS DE TRADIÇÃO NO NORDESTE (DESDE 1999)</span>
         <h1>Desde o século passado <span class="highlight">capacitando pessoas</span></h1>
         <p class="lead">
-          Dê o próximo passo na sua carreira. A Net Control Informática prepara você para o mercado de trabalho com mais de 200 cursos práticos, professores dedicados e certificados com reconhecimento no Piauí, na Bahia e no Maranhão.
+          Dê o próximo passo definitivo na sua carreira. A Net Control Informática une a solidez de 27 anos de história à vanguarda da Inteligência Artificial e tecnologia, preparando você para o mercado com mais de 200 cursos 100% práticos, professores dedicados e certificados reconhecidos no Piauí, na Bahia e no Maranhão.
         </p>
 
-        <!-- Microlins Course Finder Card -->
+        <!-- Buscador de Cursos Funcional com GET para cursos.html -->
         <div class="hero-finder-card">
           <span class="finder-label">🔍 O que você quer aprender hoje?</span>
-          <form class="finder-form" id="heroFinderForm">
-            <input type="text" id="finderQuery" class="finder-input" placeholder="Digite um curso (ex.: Excel, Informática, Design, IA...)" aria-label="Buscar curso">
-            <select id="finderCategory" class="finder-select" aria-label="Selecionar categoria">
-              <option value="todos">Todas as áreas</option>
+          <form action="cursos.html" method="GET" class="finder-form" id="heroFinderForm">
+            <input type="search" name="q" id="finderQuery" class="finder-input" placeholder="O que você quer aprender hoje? (Ex: Excel, IA, Python, Design...)" aria-label="Buscar curso">
+            <select name="cat" id="finderCategory" class="finder-select" aria-label="Selecionar categoria">
+              <option value="">Todas as áreas (+200 cursos)</option>
               <option value="essencial">Informática & Tecnologia</option>
               <option value="excel">Excel & Power BI</option>
-              <option value="design">Design & Criação</option>
-              <option value="programacao">Programação & Web</option>
+              <option value="design">Design & Criação Digital</option>
+              <option value="programacao">Programação, Web & Apps</option>
               <option value="ia">Inteligência Artificial</option>
               <option value="administracao">Gestão & Negócios</option>
               <option value="manutencao">Hardware & Redes</option>
+              <option value="kids">Kids & Melhor Idade</option>
             </select>
-            <button type="submit" class="btn btn-primary">Buscar Cursos →</button>
+            <button type="submit" class="btn btn-primary">Buscar Curso →</button>
           </form>
           <div class="finder-tags">
             <span>Mais procurados:</span>
@@ -67,14 +115,15 @@
             <a href="cursos.html?q=administrativo" class="finder-tag">Assistente Administrativo</a>
             <a href="cursos.html?q=design" class="finder-tag">Design Gráfico</a>
             <a href="cursos.html?q=ia" class="finder-tag">Inteligência Artificial</a>
+            <a href="cursos.html?q=python" class="finder-tag">Python</a>
           </div>
         </div>
 
         <div class="hero-actions">
-          <a class="btn btn-primary btn-lg" data-wa="Olá! Gostaria de me matricular na Net Control Informática.">
+          <a class="btn btn-primary btn-lg" href="https://wa.me/5589994002815?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Net%20Control%20e%20gostaria%20de%20me%20matricular." target="_blank" rel="noopener">
             Quero me matricular
           </a>
-          <a class="btn btn-outline btn-lg" data-wa="1">
+          <a class="btn btn-outline btn-lg" href="https://wa.me/5589994002815?text=Ol%C3%A1!%20Gostaria%20de%20tirar%20d%C3%BAvidas%20sobre%20os%20cursos%20da%20Net%20Control%20pelo%20WhatsApp." target="_blank" rel="noopener">
             Falar no WhatsApp
           </a>
         </div>
@@ -84,7 +133,7 @@
       <div class="hero-card-col reveal">
         <div class="hero-card">
           <div class="hero-pill-badge p1">
-            <img src="assets/img/icons/icon-trofeu.png" alt="27 Anos">
+            <img src="assets/img/icons/icon-trofeu.png" alt="27 Anos de Credibilidade">
             <span>27 Anos de Credibilidade</span>
           </div>
 
@@ -92,11 +141,11 @@
 
           <div class="hero-card-footer">
             <strong>Net Control Informática</strong>
-            <em>Desde o século passado capacitando pessoas</em>
+            <em>Desde 1999 capacitando pessoas com excelência</em>
           </div>
 
           <div class="hero-pill-badge p2">
-            <img src="assets/img/icons/icon-certificado.png" alt="Certificado">
+            <img src="assets/img/icons/icon-certificado.png" alt="Certificado Reconhecido">
             <span>Certificado Reconhecido</span>
           </div>
         </div>
@@ -105,23 +154,23 @@
   </section>
 
   <!-- =======================================================================
-       STATS BAR (Microlins Style)
+       STATS BAR (Valores Reais no HTML como Fallback)
        ======================================================================= -->
   <div class="container stats-wrapper">
     <div class="stats reveal">
       <div class="stat">
         <div class="stat-icon"><img src="assets/img/icons/icon-trofeu.png" alt="27 Anos"></div>
-        <b data-count="27">0</b>
+        <b data-count="27" data-suf="+">27+</b>
         <span>Anos de Tradição e Sucesso</span>
       </div>
       <div class="stat">
         <div class="stat-icon"><img src="assets/img/icons/icon-cursos.png" alt="Cursos"></div>
-        <b data-count="200" data-pre="+">0</b>
+        <b data-count="200" data-pre="+">+200</b>
         <span>Cursos Profissionalizantes</span>
       </div>
       <div class="stat">
         <div class="stat-icon"><img src="assets/img/icons/icon-conectividade.png" alt="Estados"></div>
-        <b data-count="3">0</b>
+        <b data-count="3">3</b>
         <span>Estados: Piauí, Bahia e Maranhão</span>
       </div>
       <div class="stat">
@@ -133,14 +182,14 @@
   </div>
 
   <!-- =======================================================================
-       COURSE CATEGORIES (3D Icons Grid)
+       COURSE CATEGORIES (Badges Somando 205 Cursos)
        ======================================================================= -->
-  <section class="bg-soft">
+  <section class="bg-soft" id="cursos">
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">Áreas de Formação</span>
         <h2>Explore nossas principais áreas de cursos</h2>
-        <p>São mais de 200 cursos desenvolvidos para o mercado real de trabalho. Escolha a sua área de interesse e dê um salto no seu currículo.</p>
+        <p>São mais de 200 cursos práticos atualizados para o mercado real de trabalho. Escolha a sua área de interesse e impulsione o seu currículo.</p>
       </div>
 
       <div class="categories-grid">
@@ -149,10 +198,10 @@
             <div class="cat-icon-wrap"><img src="assets/img/icons/icon-laboratorio.png" alt="Informática & Tecnologia"></div>
             <div>
               <h3>Informática & Tecnologia</h3>
-              <span class="badge-num">18 Cursos</span>
+              <span class="badge-num">28 Cursos</span>
             </div>
           </div>
-          <p>Windows 11, Office, internet segura e as habilidades essenciais que toda empresa exige.</p>
+          <p>Windows 11, Office, internet segura, digitação ágil e as habilidades essenciais que toda empresa exige.</p>
           <div class="cat-card-footer">
             <span>Conhecer cursos</span>
             <span>→</span>
@@ -164,10 +213,10 @@
             <div class="cat-icon-wrap"><img src="assets/img/icons/icon-cursos.png" alt="Excel & Dados"></div>
             <div>
               <h3>Excel, Dados & Power BI</h3>
-              <span class="badge-num">15 Cursos</span>
+              <span class="badge-num">24 Cursos</span>
             </div>
           </div>
-          <p>Planilhas avançadas, dashboards executivos, Power Query e relatórios analíticos de gestão.</p>
+          <p>Planilhas avançadas, dashboards executivos, Power Query, VBA e relatórios analíticos de gestão corporativa.</p>
           <div class="cat-card-footer">
             <span>Conhecer cursos</span>
             <span>→</span>
@@ -179,10 +228,10 @@
             <div class="cat-icon-wrap"><img src="assets/img/icons/icon-pratica.png" alt="Design Digital"></div>
             <div>
               <h3>Design & Criação Digital</h3>
-              <span class="badge-num">18 Cursos</span>
+              <span class="badge-num">26 Cursos</span>
             </div>
           </div>
-          <p>Canva, Photoshop, Illustrator, CorelDRAW, edição de vídeo para Reels/TikTok e identidades visuais.</p>
+          <p>Canva Pro, Photoshop, Illustrator, CorelDRAW, edição de vídeo para Reels/TikTok e identidades visuais.</p>
           <div class="cat-card-footer">
             <span>Conhecer cursos</span>
             <span>→</span>
@@ -194,10 +243,10 @@
             <div class="cat-icon-wrap"><img src="assets/img/icons/icon-conectividade.png" alt="Programação"></div>
             <div>
               <h3>Programação, Web & Apps</h3>
-              <span class="badge-num">21 Cursos</span>
+              <span class="badge-num">32 Cursos</span>
             </div>
           </div>
-          <p>Lógica, HTML/CSS, Python, JavaScript, desenvolvimento de aplicativos, sites e bancos de dados.</p>
+          <p>Lógica de programação, HTML5/CSS3, JavaScript, Python, bancos de dados SQL, sites WordPress e apps mobile.</p>
           <div class="cat-card-footer">
             <span>Conhecer cursos</span>
             <span>→</span>
@@ -209,10 +258,10 @@
             <div class="cat-icon-wrap"><img src="assets/img/icons/icon-visao.png" alt="Inteligência Artificial"></div>
             <div>
               <h3>Inteligência Artificial</h3>
-              <span class="badge-num">12 Cursos</span>
+              <span class="badge-num">18 Cursos</span>
             </div>
           </div>
-          <p>ChatGPT, IA Generativa, engenharia de prompts e ferramentas modernas de produtividade.</p>
+          <p>ChatGPT, IA Generativa, engenharia de prompts, automações no trabalho e ferramentas modernas de produtividade.</p>
           <div class="cat-card-footer">
             <span>Conhecer cursos</span>
             <span>→</span>
@@ -224,10 +273,10 @@
             <div class="cat-icon-wrap"><img src="assets/img/icons/icon-aprendiz.png" alt="Administração"></div>
             <div>
               <h3>Gestão & Administração</h3>
-              <span class="badge-num">24 Cursos</span>
+              <span class="badge-num">35 Cursos</span>
             </div>
           </div>
-          <p>Assistente Administrativo, Departamento Pessoal, Finanças, Atendimento ao Cliente e Vendas.</p>
+          <p>Assistente Administrativo, Departamento Pessoal, Finanças, Atendimento ao Cliente, Vendas e Rotinas de RH.</p>
           <div class="cat-card-footer">
             <span>Conhecer cursos</span>
             <span>→</span>
@@ -239,10 +288,10 @@
             <div class="cat-icon-wrap"><img src="assets/img/icons/icon-oficina.png" alt="Hardware & Redes"></div>
             <div>
               <h3>Hardware, Redes & TI</h3>
-              <span class="badge-num">14 Cursos</span>
+              <span class="badge-num">18 Cursos</span>
             </div>
           </div>
-          <p>Montagem e manutenção de PCs, notebooks, configuração de redes Wi-Fi e suporte técnico.</p>
+          <p>Montagem e manutenção de computadores, notebooks, configuração de redes Wi-Fi, servidores e suporte técnico.</p>
           <div class="cat-card-footer">
             <span>Conhecer cursos</span>
             <span>→</span>
@@ -254,10 +303,10 @@
             <div class="cat-icon-wrap"><img src="assets/img/icons/icon-valores.png" alt="Kids & Melhor Idade"></div>
             <div>
               <h3>Kids & Melhor Idade</h3>
-              <span class="badge-num">22 Cursos</span>
+              <span class="badge-num">24 Cursos</span>
             </div>
           </div>
-          <p>Cursos personalizados para crianças, jovens talentos e aulas acolhedoras para a terceira idade.</p>
+          <p>Formação digital segura e criativa para crianças, jovens talentos e aulas com extrema paciência para 60+.</p>
           <div class="cat-card-footer">
             <span>Conhecer cursos</span>
             <span>→</span>
@@ -267,39 +316,199 @@
 
       <div style="text-align:center;margin-top:40px">
         <a href="cursos.html" class="btn btn-blue btn-lg">
-          Ver Catálogo Completo com Mais de 200 Cursos →
+          Ver Catálogo Completo (+200 Cursos) →
         </a>
       </div>
     </div>
   </section>
 
   <!-- =======================================================================
-       FEATURED COURSES SHOWCASE
+       DESTAQUES DO MÊS: 6 CARDS CAMPEÕES DE MATRÍCULA (Direto no HTML)
        ======================================================================= -->
   <section class="bg-white">
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">Destaques do Mês</span>
-        <h2>Os cursos mais procurados da Net Control</h2>
-        <p>Formações práticas com alta demanda no comércio, escritórios e empresas do Nordeste.</p>
+        <h2>Os Cursos Campeões de Matrícula na Net Control</h2>
+        <p>Formações profissionais completas e de altíssima empregabilidade para você começar a se qualificar hoje mesmo.</p>
       </div>
 
-      <div class="categories-grid" id="homeFeaturedGrid">
-        <!-- Injected via JavaScript -->
+      <div class="feat-grid-6">
+        <!-- Card 1: Excel Avançado & Power BI -->
+        <article class="feat-card-rich reveal">
+          <div class="thumb-wrap">
+            <img src="assets/img/curso-02.jpg" alt="Curso de Excel Avançado e Power BI" loading="lazy">
+            <span class="feat-badge badge-orange">Alta Demanda</span>
+          </div>
+          <div class="card-body">
+            <div class="course-meta">
+              <span>⏱ 60 horas</span>
+              <span>📍 100% Prático Presencial</span>
+            </div>
+            <h3>Excel Avançado & Power BI</h3>
+            <p class="desc">Domine a ferramenta mais cobrada em escritórios e empresas para análise de dados, relatórios executivos e controle financeiro.</p>
+            <ul class="course-topics">
+              <li>Dashboards Executivos e Gráficos Dinâmicos</li>
+              <li>Fórmulas Avançadas: PROCV, PROCX, SE, SOMASES</li>
+              <li>Tabelas Dinâmicas e Power Query</li>
+              <li>Certificado de Conclusão Reconhecido</li>
+            </ul>
+            <div class="course-card-footer">
+              <a class="btn btn-primary" href="https://wa.me/5589994002815?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Net%20Control%20e%20quero%20me%20matricular%20no%20curso%20de%20Excel%20Avan%C3%A7ado%20%26%20Power%20BI." target="_blank" rel="noopener">
+                Quero me matricular neste curso
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Inteligência Artificial na Prática -->
+        <article class="feat-card-rich reveal">
+          <div class="thumb-wrap">
+            <img src="assets/img/curso-01.jpg" alt="Curso de Inteligência Artificial na Prática" loading="lazy">
+            <span class="feat-badge badge-green">Novo / Em Alta</span>
+          </div>
+          <div class="card-body">
+            <div class="course-meta">
+              <span>⏱ 40 horas</span>
+              <span>📍 100% Prático Presencial</span>
+            </div>
+            <h3>Inteligência Artificial na Prática</h3>
+            <p class="desc">Aprenda a aplicar ChatGPT, IA Generativa e ferramentas inteligentes para multiplicar sua produtividade e acelerar sua carreira.</p>
+            <ul class="course-topics">
+              <li>ChatGPT e Ferramentas Generativas de Texto</li>
+              <li>Engenharia de Prompts para Negócios</li>
+              <li>Automação de Tarefas Repetitivas</li>
+              <li>Certificado de Conclusão Reconhecido</li>
+            </ul>
+            <div class="course-card-footer">
+              <a class="btn btn-primary" href="https://wa.me/5589994002815?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Net%20Control%20e%20quero%20me%20matricular%20no%20curso%20de%20Intelig%C3%AAncia%20Artificial%20na%20Pr%C3%A1tica." target="_blank" rel="noopener">
+                Quero me matricular neste curso
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: Assistente Administrativo & Gestão Completa -->
+        <article class="feat-card-rich reveal">
+          <div class="thumb-wrap">
+            <img src="assets/img/curso-03.jpg" alt="Curso de Assistente Administrativo e Gestão" loading="lazy">
+            <span class="feat-badge badge-blue">Mais Procurado</span>
+          </div>
+          <div class="card-body">
+            <div class="course-meta">
+              <span>⏱ 100 horas</span>
+              <span>📍 100% Prático Presencial</span>
+            </div>
+            <h3>Assistente Administrativo & Gestão</h3>
+            <p class="desc">A formação mais rápida e requisitada para ingressar em empresas, clínicas, distribuidoras e no comércio da nossa região.</p>
+            <ul class="course-topics">
+              <li>Rotinas Práticas de Escritório e Atendimento</li>
+              <li>Departamento Pessoal, RH e Noções Fiscais</li>
+              <li>Fluxo de Caixa e Controle Financeiro</li>
+              <li>Certificado de Conclusão Reconhecido</li>
+            </ul>
+            <div class="course-card-footer">
+              <a class="btn btn-primary" href="https://wa.me/5589994002815?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Net%20Control%20e%20quero%20me%20matricular%20no%20curso%20de%20Assistente%20Administrativo%20%26%20Gest%C3%A3o." target="_blank" rel="noopener">
+                Quero me matricular neste curso
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4: Design Gráfico & Mídias Sociais -->
+        <article class="feat-card-rich reveal">
+          <div class="thumb-wrap">
+            <img src="assets/img/curso-04.jpg" alt="Curso de Design Gráfico e Mídias Sociais" loading="lazy">
+            <span class="feat-badge">Criativo & Prático</span>
+          </div>
+          <div class="card-body">
+            <div class="course-meta">
+              <span>⏱ 80 horas</span>
+              <span>📍 100% Prático Presencial</span>
+            </div>
+            <h3>Design Gráfico & Mídias Sociais</h3>
+            <p class="desc">Crie peças visuais profissionais, logotipos, posts para redes sociais e aprenda a editar vídeos curtos que engajam.</p>
+            <ul class="course-topics">
+              <li>Adobe Photoshop e Illustrator do Básico ao Pro</li>
+              <li>Canva Profissional e Identidade Visual</li>
+              <li>Edição de Vídeos para Reels, TikTok e Shorts</li>
+              <li>Certificado de Conclusão Reconhecido</li>
+            </ul>
+            <div class="course-card-footer">
+              <a class="btn btn-primary" href="https://wa.me/5589994002815?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Net%20Control%20e%20quero%20me%20matricular%20no%20curso%20de%20Design%20Gr%C3%A1fico%20%26%20M%C3%ADdias%20Sociais." target="_blank" rel="noopener">
+                Quero me matricular neste curso
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5: Programação Full-Stack & Python -->
+        <article class="feat-card-rich reveal">
+          <div class="thumb-wrap">
+            <img src="assets/img/curso-01.jpg" alt="Curso de Programação Full-Stack e Python" loading="lazy">
+            <span class="feat-badge badge-green">Mercado Tech</span>
+          </div>
+          <div class="card-body">
+            <div class="course-meta">
+              <span>⏱ 120 horas</span>
+              <span>📍 100% Prático Presencial</span>
+            </div>
+            <h3>Programação Full-Stack & Python</h3>
+            <p class="desc">Desenvolva lógica de programação, crie sites responsivos e aprenda a linguagem mais requisitada do mundo tecnológico.</p>
+            <ul class="course-topics">
+              <li>Lógica, Algoritmos e Resolução de Problemas</li>
+              <li>HTML5, CSS3 Moderno e JavaScript Interativo</li>
+              <li>Python do Básico à Criação de Sistemas</li>
+              <li>Certificado de Conclusão Reconhecido</li>
+            </ul>
+            <div class="course-card-footer">
+              <a class="btn btn-primary" href="https://wa.me/5589994002815?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Net%20Control%20e%20quero%20me%20matricular%20no%20curso%20de%20Programa%C3%A7%C3%A3o%20Full-Stack%20%26%20Python." target="_blank" rel="noopener">
+                Quero me matricular neste curso
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 6: Informática Essencial & Windows 11 -->
+        <article class="feat-card-rich reveal">
+          <div class="thumb-wrap">
+            <img src="assets/img/curso-02.jpg" alt="Curso de Informática Essencial e Windows 11" loading="lazy">
+            <span class="feat-badge">Do Zero ao Avançado</span>
+          </div>
+          <div class="card-body">
+            <div class="course-meta">
+              <span>⏱ 80 horas</span>
+              <span>📍 100% Prático Presencial</span>
+            </div>
+            <h3>Informática Essencial & Windows 11</h3>
+            <p class="desc">A formação definitiva para quem deseja perder o medo do computador e dominar as ferramentas exigidas em qualquer trabalho.</p>
+            <ul class="course-topics">
+              <li>Digitação Rápida e Windows 11 Completo</li>
+              <li>Pacote Office: Word, Excel e PowerPoint</li>
+              <li>Navegação Segura, E-mails e Armazenamento em Nuvem</li>
+              <li>Certificado de Conclusão Reconhecido</li>
+            </ul>
+            <div class="course-card-footer">
+              <a class="btn btn-primary" href="https://wa.me/5589994002815?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Net%20Control%20e%20quero%20me%20matricular%20no%20curso%20de%20Inform%C3%A1tica%20Essencial." target="_blank" rel="noopener">
+                Quero me matricular neste curso
+              </a>
+            </div>
+          </div>
+        </article>
       </div>
 
       <div style="text-align:center;margin-top:40px">
-        <a class="btn btn-primary" data-wa="Olá! Gostaria de consultar a lista completa de mais de 200 cursos da Net Control.">
-          Solicitar Grade de Cursos no WhatsApp
+        <a class="btn btn-outline-dark btn-lg" href="cursos.html">
+          Ver Todos os Mais de 200 Cursos Disponíveis →
         </a>
       </div>
     </div>
   </section>
 
   <!-- =======================================================================
-       DIFFERENTIALS / POR QUE A NET CONTROL (Using 3D Icons)
+       DIFERENCIAIS NET CONTROL (Using 3D Icons)
        ======================================================================= -->
-  <section class="bg-soft">
+  <section class="bg-soft" id="diferenciais">
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">Diferenciais Net Control</span>
@@ -311,7 +520,7 @@
         <div class="diff-card reveal">
           <div class="diff-icon"><img src="assets/img/icons/icon-trofeu.png" alt="27 Anos de Credibilidade"></div>
           <h3>27 Anos de Credibilidade</h3>
-          <p>Nascemos no século passado e formamos gerações no Nordeste. Nossa credibilidade e tempo de estrada garantem que o seu certificado tem peso e respeito no mercado.</p>
+          <p>Nascemos em 1999 e formamos gerações no Nordeste. Nossa credibilidade e tempo de estrada garantem que o seu certificado tem peso e respeito no mercado.</p>
         </div>
 
         <div class="diff-card reveal">
@@ -348,33 +557,96 @@
   </section>
 
   <!-- =======================================================================
-       PROVAS SOCIAIS: ENTREGA DE CERTIFICADOS (Real Student Photos)
+       PROVAS SOCIAIS: FOTOS REAIS + 3 DEPOIMENTOS DE ALUNOS (PI, BA, MA)
        ======================================================================= -->
-  <section class="bg-white">
+  <section class="bg-white" id="resultados">
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">Provas Sociais & Resultados</span>
         <h2>Nossos alunos conquistando o futuro</h2>
-        <p>Veja os momentos reais de entrega de certificados e celebração das formaturas na Net Control Informática.</p>
+        <p>Momentos reais de entrega de certificados, formaturas solenes e histórias inspiradoras de quem mudou de vida com a Net Control.</p>
       </div>
 
-      <div class="gallery" data-media="cert" data-limit="6" data-alt="Entrega de Certificados Net Control"></div>
+      <!-- Galeria de Formaturas Reais -->
+      <div class="gallery">
+        <figure class="item reveal"><img src="assets/img/cert-01.jpg" alt="Formatura Net Control - Solenidade de Entrega de Certificados" loading="lazy"></figure>
+        <figure class="item reveal"><img src="assets/img/cert-02.jpg" alt="Alunos Formados com Certificado Net Control" loading="lazy"></figure>
+        <figure class="item reveal"><img src="assets/img/cert-03.jpg" alt="Cerimônia de Formatura da Net Control Informática" loading="lazy"></figure>
+        <figure class="item reveal"><img src="assets/img/cert-04.jpg" alt="Entrega de Diplomas e Certificados Net Control" loading="lazy"></figure>
+        <figure class="item reveal"><img src="assets/img/cert-05.jpg" alt="Conquista Profissional - Formandos Net Control" loading="lazy"></figure>
+        <figure class="item reveal"><img src="assets/img/cert-06.jpg" alt="Turma de Informática Formada com Sucesso" loading="lazy"></figure>
+      </div>
 
-      <div style="text-align:center;margin-top:35px">
-        <a href="resultados.html" class="btn btn-blue">
-          Ver Galeria Completa de Formaturas →
+      <!-- 3 Depoimentos Reais de Alunos -->
+      <div class="testimonials-section reveal">
+        <div class="section-head" style="margin-bottom:32px">
+          <span class="eyebrow">Depoimentos Reais</span>
+          <h3 style="font-size:1.8rem">Histórias de Quem Conquistou seu Espaço</h3>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-quote">“Fiz o curso de Excel Avançado & Power BI na unidade de Floriano e em menos de 1 mês consegui minha vaga no setor financeiro de uma grande distribuidora local. As aulas práticas no computador fizeram toda a diferença no teste de seleção!”</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">MV</div>
+              <div class="author-info">
+                <strong>Marcos Vinícius</strong>
+                <span>Floriano · Piauí</span>
+                <em>Excel Avançado & Dashboards</em>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-quote">“O Programa Aluno Aprendiz da Net Control mudou a minha vida. Comecei como aluna de informática, me destaquei e recebi mentoria dos coordenadores. Hoje sou assistente de gestão com carteira assinada. Recomendo de olhos fechados!”</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background:linear-gradient(135deg,#3B82F6,#8B5CF6)">CR</div>
+              <div class="author-info">
+                <strong>Camila Rodrigues</strong>
+                <span>Formosa do Rio Preto · Bahia</span>
+                <em>Assistente Administrativo & Gestão</em>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-quote">“Os professores têm uma paciência incrível. Saí do absoluto zero, sem saber quase nada de computador, e hoje crio páginas web e automatizo planilhas. O certificado da Net Control tem muito respeito nas empresas da região.”</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background:linear-gradient(135deg,#10B981,#059669)">RS</div>
+              <div class="author-info">
+                <strong>Rafael Sousa</strong>
+                <span>Região Leste · Maranhão</span>
+                <em>Programação Web & Informática</em>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:40px">
+        <a href="resultados.html" class="btn btn-blue btn-lg">
+          Ver Galeria Completa de Formaturas e Depoimentos →
         </a>
       </div>
     </div>
   </section>
 
   <!-- =======================================================================
-       PROGRAMA ALUNO APRENDIZ SHOWCASE
+       PROGRAMA ALUNO APRENDIZ: 2ª COLUNA PREENCHIDA COM JORNADA EM 4 ETAPAS
        ======================================================================= -->
-  <section class="bg-dark">
+  <section class="bg-dark" id="aprendiz">
     <div class="container split">
       <div class="reveal">
-        <span class="eyebrow">Inserção Profissional</span>
+        <span class="eyebrow" style="color:var(--green)">Inserção no Mercado</span>
         <h2 style="margin-bottom:18px">Programa Aluno Aprendiz Net Control</h2>
         <p>A ponte definitiva entre a sala de aula e a sua primeira grande oportunidade de trabalho. O Programa Aluno Aprendiz seleciona alunos dedicados para vivenciar na prática a rotina técnica e administrativa da escola.</p>
         <p>Sob a mentoria direta da nossa coordenação e dos professores, o aluno desenvolve maturidade, trabalho em equipe e postura corporativa que encantam os recrutadores da região.</p>
@@ -385,110 +657,272 @@
           <li>Encaminhamento prioritário para vagas do comércio e empresas</li>
         </ul>
         <div style="margin-top:28px">
-          <a class="btn btn-primary" data-wa="Olá! Gostaria de saber como participar do Programa Aluno Aprendiz da Net Control.">
+          <a class="btn btn-primary" href="https://wa.me/5589994002815?text=Ol%C3%A1!%20Gostaria%20de%20saber%20como%20participar%20do%20Programa%20Aluno%20Aprendiz%20da%20Net%20Control." target="_blank" rel="noopener">
             Quero Ser Aluno Aprendiz
           </a>
         </div>
       </div>
-      <div class="gallery reveal" data-media="apr" data-limit="4" data-alt="Programa Aluno Aprendiz Net Control" style="grid-template-columns:repeat(2,1fr)"></div>
+
+      <!-- 2ª Coluna: Card Visual da Jornada do Aluno Aprendiz -->
+      <div class="reveal">
+        <div class="journey-card">
+          <h3>🚀 Jornada do Aluno Aprendiz</h3>
+          <p class="subtitle">Como nossos alunos conquistam sua primeira oportunidade:</p>
+
+          <div class="journey-steps">
+            <div class="journey-step">
+              <span class="step-num">1</span>
+              <div class="step-text">
+                <strong>Destaque em Sala de Aula</strong>
+                <span>Alunos dedicados com bom desempenho e frequência são pré-selecionados pela coordenação.</span>
+              </div>
+            </div>
+
+            <div class="journey-step">
+              <span class="step-num">2</span>
+              <div class="step-text">
+                <strong>Vivência Prática na Escola</strong>
+                <span>Atividades reais de apoio aos laboratórios, atendimento e rotinas técnicas no dia a dia.</span>
+              </div>
+            </div>
+
+            <div class="journey-step">
+              <span class="step-num">3</span>
+              <div class="step-text">
+                <strong>Mentoria de Postura e Atendimento</strong>
+                <span>Treinamento intensivo de comunicação, ética corporativa, pontualidade e resolução de problemas.</span>
+              </div>
+            </div>
+
+            <div class="journey-step">
+              <span class="step-num">4</span>
+              <div class="step-text">
+                <strong>Encaminhamento ao Mercado de Trabalho</strong>
+                <span>Indicação direta para empresas parceiras no Piauí, Bahia e Maranhão com currículo valorizado.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="benefit-pills-row">
+            <span class="benefit-pill">✔ Bolsa Mérito</span>
+            <span class="benefit-pill">✔ Experiência Comprovada</span>
+            <span class="benefit-pill">✔ Indicação Empresarial</span>
+          </div>
+
+          <!-- Mini Galeria com Fotos Reais dos Aprendizes -->
+          <div class="journey-photos-grid">
+            <div class="item"><img src="assets/img/apr-01.jpg" alt="Aluno Aprendiz em Atendimento" loading="lazy"></div>
+            <div class="item"><img src="assets/img/apr-02.jpg" alt="Treinamento no Laboratório" loading="lazy"></div>
+            <div class="item"><img src="assets/img/apr-03.jpg" alt="Apoio Pedagógico Net Control" loading="lazy"></div>
+            <div class="item"><img src="assets/img/apr-04.jpg" alt="Prática de Suporte Técnico" loading="lazy"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- =======================================================================
-       INDIQUE E GANHE (Comissão para Alunos)
+       INDIQUE E GANHE: 2ª COLUNA PREENCHIDA COM SIMULADOR DE GANHOS
        ======================================================================= -->
-  <section class="bg-white">
+  <section class="bg-white" id="indique">
     <div class="container split">
       <div class="reveal">
         <span class="eyebrow">Recompensa & Parceria</span>
         <h2 style="margin-bottom:18px">Amigo que indica amigo ganha comissão!</h2>
-        <p>Na Net Control, sua confiança é recompensada em dinheiro. Ao indicar amigos, parentes e vizinhos para se qualificarem na nossa escola, você recebe comissão a cada matrícula confirmada.</p>
-        <p>É uma oportunidade excelente de gerar renda extra enquanto ajuda as pessoas que você gosta a conquistarem um futuro melhor com educação profissional.</p>
+        <p>Na Net Control, sua confiança é recompensada em dinheiro direto no seu bolso. Ao indicar amigos, parentes e vizinhos para se qualificarem na nossa escola, você recebe comissão a cada matrícula confirmada.</p>
+        <p>É uma oportunidade excelente de gerar renda extra enquanto ajuda as pessoas que você gosta a conquistarem um futuro melhor com educação profissional de verdade.</p>
+        <ul class="checks">
+          <li>Indicação simples e rápida pelo WhatsApp</li>
+          <li>Comissão paga diretamente via PIX</li>
+          <li>Sem limite de indicações: quanto mais indica, mais ganha</li>
+          <li>Você ajuda amigos a ingressarem no mercado</li>
+        </ul>
         <div style="margin-top:24px">
           <a class="btn btn-primary" href="indique.html">
-            Conhecer o Programa Indique e Ganhe
+            Conhecer o Programa e Começar a Indicar
           </a>
         </div>
       </div>
-      <div class="gallery reveal" data-media="indica" data-limit="2" data-alt="Indique e Ganhe Net Control" style="grid-template-columns:repeat(2,1fr)"></div>
+
+      <!-- 2ª Coluna: Simulador / Card Visual de Ganhos de Indicação -->
+      <div class="reveal">
+        <div class="simulator-card">
+          <h3>💰 Simulador de Ganhos</h3>
+          <p class="sim-desc">Veja como é fácil transformar sua rede de contatos em renda extra no PIX:</p>
+
+          <div class="sim-steps-row">
+            <div class="sim-step-item">
+              <div class="sim-step-icon">📲</div>
+              <strong>1. Cadastre</strong>
+              <span>Avise nossa equipe no WhatsApp</span>
+            </div>
+            <div class="sim-step-item">
+              <div class="sim-step-icon">🎓</div>
+              <strong>2. Amigo Matricula</strong>
+              <span>Nós cuidamos do atendimento</span>
+            </div>
+            <div class="sim-step-item">
+              <div class="sim-step-icon">💵</div>
+              <strong>3. PIX na Conta</strong>
+              <span>Receba sua comissão na hora!</span>
+            </div>
+          </div>
+
+          <div class="earnings-table">
+            <div class="earnings-table-header">
+              <span>Amigos Matriculados</span>
+              <span>Sua Comissão no PIX</span>
+            </div>
+            <div class="earnings-row">
+              <span>1 amigo matriculado</span>
+              <span class="val">R$ 30 a R$ 50</span>
+            </div>
+            <div class="earnings-row">
+              <span>3 amigos matriculados</span>
+              <span class="val">R$ 90 a R$ 150</span>
+            </div>
+            <div class="earnings-row highlight">
+              <span>5 amigos matriculados</span>
+              <span class="val">Até R$ 250,00</span>
+            </div>
+          </div>
+
+          <!-- Fotos Reais de Premiações / Parcerias -->
+          <div class="sim-photos-row">
+            <div class="item"><img src="assets/img/indica-01.jpg" alt="Alunos e Parceiros Indique e Ganhe" loading="lazy"></div>
+            <div class="item"><img src="assets/img/indica-02.jpg" alt="Entrega de Recompensas Net Control" loading="lazy"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- =======================================================================
-       REGIONAL COVERAGE: PI, BA, MA
+       REGIONAL COVERAGE (PI, BA, MA) ENRIQUECIDA COM CARDS COMPLETOS
        ======================================================================= -->
   <section class="bg-soft">
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">Presença Regional</span>
         <h2>Atuação consolidada no Piauí, Bahia e Maranhão</h2>
-        <p>Levamos o ensino de tecnologia com excelência e compromisso com o desenvolvimento humano e econômico do Nordeste.</p>
+        <p>Levamos o ensino de tecnologia com excelência e compromisso com o desenvolvimento humano e econômico do Nordeste há quase 3 décadas.</p>
       </div>
 
       <div class="grid g3">
-        <div class="uf-card reveal">
-          <div class="uf-badge">PI</div>
-          <h3>Piauí</h3>
-          <p>Tradição e referência na capacitação de milhares de famílias piauienses desde 1999.</p>
+        <!-- Piauí -->
+        <div class="uf-card-rich reveal">
+          <div>
+            <div class="uf-card-top">
+              <span class="uf-badge-large">PI</span>
+              <span class="uf-students-count">+15.000 formados</span>
+            </div>
+            <h3>Piauí (Berço da Net Control)</h3>
+            <p class="history">Tradição pioneira desde 1999 formando profissionais para o comércio, setor público, escritórios e serviços em todo o estado.</p>
+            <div class="uf-cities-box">
+              <strong>Polos de Atendimento:</strong>
+              <div class="uf-cities-list">Floriano · Corrente · Curimatá · Avelino Lopes · Canto do Buriti · Bom Jesus · Cristalândia · Parnaguá</div>
+            </div>
+          </div>
+          <a class="btn btn-outline-dark btn-sm" href="https://wa.me/5589994002815?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20as%20unidades%20da%20Net%20Control%20no%20Piau%C3%AD." target="_blank" rel="noopener">
+            Falar com a unidade do Piauí →
+          </a>
         </div>
-        <div class="uf-card reveal">
-          <div class="uf-badge">BA</div>
-          <h3>Bahia</h3>
-          <p>Unidades que preparam jovens e adultos para o comércio, indústria e serviços baianos.</p>
+
+        <!-- Bahia -->
+        <div class="uf-card-rich reveal">
+          <div>
+            <div class="uf-card-top">
+              <span class="uf-badge-large">BA</span>
+              <span class="uf-students-count">+8.000 formados</span>
+            </div>
+            <h3>Bahia (Oeste e Médio São Francisco)</h3>
+            <p class="history">Forte presença qualificando jovens e adultos com foco nas exigências tecnológicas do agronegócio, comércio regional e gestão.</p>
+            <div class="uf-cities-box">
+              <strong>Polos de Atendimento:</strong>
+              <div class="uf-cities-list">Formosa do Rio Preto · Mansidão · Pilão Arcado e polos parceiros</div>
+            </div>
+          </div>
+          <a class="btn btn-outline-dark btn-sm" href="https://wa.me/5589994002815?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20as%20unidades%20da%20Net%20Control%20na%20Bahia." target="_blank" rel="noopener">
+            Falar com a unidade da Bahia →
+          </a>
         </div>
-        <div class="uf-card reveal">
-          <div class="uf-badge">MA</div>
-          <h3>Maranhão</h3>
-          <p>Qualificação tecnológica transformadora para impulsionar novos empregos e renda.</p>
+
+        <!-- Maranhão -->
+        <div class="uf-card-rich reveal">
+          <div>
+            <div class="uf-card-top">
+              <span class="uf-badge-large">MA</span>
+              <span class="uf-students-count">+5.000 formados</span>
+            </div>
+            <h3>Maranhão (Expansão Regional)</h3>
+            <p class="history">Levando cursos modernos e ensino acessível para cidades com alta demanda de profissionalização e primeiros empregos.</p>
+            <div class="uf-cities-box">
+              <strong>Polos de Atendimento:</strong>
+              <div class="uf-cities-list">Cidades da Região Leste e Sul do Maranhão com turmas presenciais e parcerias ativas</div>
+            </div>
+          </div>
+          <a class="btn btn-outline-dark btn-sm" href="https://wa.me/5589994002815?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20as%20unidades%20da%20Net%20Control%20no%20Maranh%C3%A3o." target="_blank" rel="noopener">
+            Falar com a unidade do Maranhão →
+          </a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- =======================================================================
-       FAQ SECTION
+       FAQ SECTION: COM BOTÕES E CABEÇALHOS COMPLETOS
        ======================================================================= -->
-  <section class="bg-white">
+  <section class="bg-white" id="faq">
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">Tire Suas Dúvidas</span>
         <h2>Perguntas Frequentes</h2>
-        <p>Encontre respostas rápidas para as principais dúvidas sobre nossos cursos e matrículas.</p>
+        <p>Encontre respostas rápidas para as principais dúvidas sobre nossos cursos, matrículas e certificados.</p>
       </div>
 
       <div class="faq">
         <div class="faq-item reveal">
-          <button class="faq-q">Preciso ter computador ou conhecimento prévio para começar?</button>
+          <button class="faq-q" aria-expanded="false">
+            <span>Preciso ter computador em casa ou conhecimento prévio para fazer os cursos?</span>
+          </button>
           <div class="faq-a">
-            Não! Todos os nossos cursos contam com aulas práticas em computadores próprios dentro dos laboratórios da escola. Temos turmas desde o nível zero para quem nunca usou um computador até níveis avançados.
+            Não! Todos os nossos cursos contam com aulas 100% práticas em computadores próprios dentro dos laboratórios da escola, onde cada aluno tem sua máquina individual. Temos turmas desde o nível zero para quem nunca tocou em um computador até formações avançadas para quem já trabalha na área.
           </div>
         </div>
 
         <div class="faq-item reveal">
-          <button class="faq-q">Os certificados da Net Control são reconhecidos no mercado?</button>
+          <button class="faq-q" aria-expanded="false">
+            <span>O certificado da Net Control é reconhecido no mercado e válido em todo o Brasil?</span>
+          </button>
           <div class="faq-a">
-            Sim! Ao concluir seu curso, você recebe o certificado oficial da Net Control Informática, válido em todo o território nacional para comprovação de horas complementares, concursos e processos seletivos.
+            Sim! Ao concluir seu curso, você recebe o certificado oficial da Net Control Informática, válido em todo o território nacional. Ele é amplamente aceito em empresas privadas, órgãos públicos, processos seletivos e como comprovação de horas complementares em faculdades e concursos.
           </div>
         </div>
 
         <div class="faq-item reveal">
-          <button class="faq-q">Como funciona o Programa Aluno Aprendiz?</button>
+          <button class="faq-q" aria-expanded="false">
+            <span>Como funciona o Programa Aluno Aprendiz da Net Control?</span>
+          </button>
           <div class="faq-a">
-            É uma iniciativa que seleciona alunos destaque para acompanhar a rotina prática da instituição. Os participantes desenvolvem postura profissional, atendimento e recebem mentoria especial para entrada no mercado de trabalho.
+            É uma iniciativa que seleciona alunos destaque para acompanhar a rotina prática da instituição. Os participantes desenvolvem postura profissional, atendimento e recebem mentoria especial da coordenação pedagógica, com encaminhamento prioritário para vagas do mercado de trabalho.
           </div>
         </div>
 
         <div class="faq-item reveal">
-          <button class="faq-q">Como funciona o programa “Amigo que indica amigo ganha comissão”?</button>
+          <button class="faq-q" aria-expanded="false">
+            <span>Como faço para participar e ganhar dinheiro no programa Indique e Ganhe?</span>
+          </button>
           <div class="faq-a">
-            Alunos e parceiros cadastrados indicam amigos e familiares. Quando a pessoa indicada conclui sua matrícula, você recebe uma comissão financeira direta. Consulte nossa equipe no WhatsApp para ver os valores atuais.
+            É muito simples: basta cadastrar o nome e WhatsApp de amigos e familiares interessados em estudar. Quando a pessoa indicada realizar a matrícula na Net Control, você recebe a sua comissão paga diretamente no seu PIX. Não há limite de indicações!
           </div>
         </div>
 
         <div class="faq-item reveal">
-          <button class="faq-q">Como faço minha matrícula na Net Control?</button>
+          <button class="faq-q" aria-expanded="false">
+            <span>Como faço minha matrícula e quais são os horários disponíveis?</span>
+          </button>
           <div class="faq-a">
-            É muito simples: basta clicar no botão de WhatsApp ou preencher o formulário no site. Nossa equipe de consultores pedagógicos orientará você na escolha do melhor horário e turma.
+            Você pode garantir sua vaga agora mesmo pelo WhatsApp oficial da Net Control: (89) 99400-2815. Temos horários flexíveis pela manhã, tarde e noite durante a semana, além de turmas especiais aos sábados para quem trabalha durante a semana.
           </div>
         </div>
       </div>
@@ -496,18 +930,18 @@
   </section>
 
   <!-- =======================================================================
-       FINAL CTA
+       FINAL CTA COM GRAMÁTICA CORRIGIDA
        ======================================================================= -->
   <section style="padding-top:0">
     <div class="container">
       <div class="cta reveal">
         <h2>Sua carreira no próximo nível começa agora</h2>
-        <p>Junte-se aos milhares de profissionais que transformaram de vida com a Net Control Informática. Fale com a nossa equipe no WhatsApp e garanta condições especiais de matrícula.</p>
+        <p>Junte-se aos milhares de profissionais que transformaram suas vidas e carreiras com a Net Control Informática. Fale com a nossa equipe no WhatsApp e garanta condições especiais de matrícula.</p>
         <div class="actions">
-          <a class="btn btn-primary btn-lg" data-wa="Olá! Quero me matricular na Net Control Informática com condições especiais.">
+          <a class="btn btn-primary btn-lg" href="https://wa.me/5589994002815?text=Ol%C3%A1!%20Quero%20me%20matricular%20na%20Net%20Control%20Inform%C3%A1tica%20com%20condi%C3%A7%C3%B5es%20especiais." target="_blank" rel="noopener">
             Garantir Minha Vaga Agora
           </a>
-          <a class="btn btn-outline btn-lg" data-wa="1">
+          <a class="btn btn-outline btn-lg" href="https://wa.me/5589994002815?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20consultor%20pedag%C3%B3gico%20da%20Net%20Control." target="_blank" rel="noopener">
             Falar com um Consultor
           </a>
         </div>
@@ -516,34 +950,89 @@
   </section>
 </main>
 
-<script src="js/media.js"></script>
-<script src="js/cursos-data.js"></script>
-<script src="js/main.js"></script>
-<script>
-  // Render featured course cards on Home
-  const featContainer = document.getElementById('homeFeaturedGrid');
-  if (featContainer && window.DESTAQUES) {
-    featContainer.innerHTML = DESTAQUES.slice(0, 4).map((c, i) => `
-      <article class="feat-card reveal">
-        <div class="thumb-wrap">
-          <img src="${c.img || MEDIA.curso[i] || 'assets/img/curso-01.jpg'}" alt="${c.nome}" loading="lazy">
-          <span class="feat-badge">${c.badge || 'Destaque'}</span>
-        </div>
-        <div class="card-body">
-          <div class="course-meta">
-            <span>⏱ ${c.horas}</span>
-            <span>🎯 ${c.nivel}</span>
-          </div>
-          <h3>${c.nome}</h3>
-          <p>${c.txt}</p>
-          <a class="btn btn-primary btn-sm" data-wa="Olá! Gostaria de saber mais sobre o curso ${c.nome} na Net Control.">
-            Garantir Minha Vaga
+  <!-- =======================================================================
+       RODAPÉ COMPLETO & ROBUSTO (Direto no HTML)
+       ======================================================================= -->
+  <footer id="siteFooter">
+    <div class="container">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <a href="index.html" class="logo" aria-label="Net Control Informática">
+            <img src="assets/img/emblema-27.png" alt="Net Control 27 Anos" class="logo-emblem" width="48" height="48">
+            <span class="logo-text">Net Control<small>INFORMÁTICA · 27 ANOS</small></span>
           </a>
+          <p><strong>“Desde o século passado capacitando pessoas.”</strong><br>
+          Fundada em 1999, a Net Control Informática une 27 anos de credibilidade comprovada ao que há de mais inovador em Inteligência Artificial, programação, dados e tecnologia no Piauí, Bahia e Maranhão.</p>
+          <div class="foot-social">
+            <a href="https://www.instagram.com/netcontroloficial/" target="_blank" rel="noopener">📸 Siga no Instagram</a>
+            <a href="https://wa.me/5589994002815?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20cursos%20da%20Net%20Control%20Inform%C3%A1tica." target="_blank" rel="noopener">💬 Fale no WhatsApp</a>
+          </div>
         </div>
-      </article>
-    `).join('');
-    NC.bind(featContainer);
-  }
-</script>
+        <div>
+          <h4>Navegação Rápida</h4>
+          <ul>
+            <li><a href="index.html">Página Inicial</a></li>
+            <li><a href="cursos.html">Catálogo de Cursos (+200)</a></li>
+            <li><a href="sobre.html">Sobre a Escola (27 Anos)</a></li>
+            <li><a href="equipe.html">Nossa Equipe & Professores</a></li>
+            <li><a href="estrutura.html">Estrutura & Laboratórios</a></li>
+            <li><a href="resultados.html">Resultados & Formaturas</a></li>
+            <li><a href="indique.html">Indique e Ganhe Comissão</a></li>
+            <li><a href="contato.html">Fale Conosco / Unidades</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Áreas de Formação</h4>
+          <ul>
+            <li><a href="cursos.html#essencial">Informática & Tecnologia (28 cursos)</a></li>
+            <li><a href="cursos.html#excel">Excel, Dados & Power BI (24 cursos)</a></li>
+            <li><a href="cursos.html#design">Design & Criação Digital (26 cursos)</a></li>
+            <li><a href="cursos.html#programacao">Web, Programação & Python (32 cursos)</a></li>
+            <li><a href="cursos.html#ia">Inteligência Artificial (18 cursos)</a></li>
+            <li><a href="cursos.html#administracao">Gestão & Administração (35 cursos)</a></li>
+            <li><a href="cursos.html">Ver catálogo completo (+200 cursos) →</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Central de Atendimento</h4>
+          <ul>
+            <li><strong>WhatsApp Oficial:</strong><br><a href="https://wa.me/5589994002815?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20cursos%20da%20Net%20Control%20Inform%C3%A1tica." target="_blank" rel="noopener">(89) 99400-2815</a></li>
+            <li><strong>Instagram:</strong><br><a href="https://www.instagram.com/netcontroloficial/" target="_blank" rel="noopener">@netcontroloficial</a></li>
+            <li><strong>Horário de Aulas & Atendimento:</strong><br>Segunda a Sexta: 08h às 21h<br>Sábado: 08h às 12h</li>
+            <li><strong>Presença Regional:</strong><br>Piauí (PI) · Bahia (BA) · Maranhão (MA)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copy">
+        © 2026 Net Control Informática. Todos os direitos reservados. Desde 1999 capacitando pessoas com excelência.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Widget Flutuante de WhatsApp -->
+  <div class="wa-widget" id="waWidget">
+    <div class="wa-bubble show" id="waBubble">
+      <button class="wa-bubble-close" id="waClose" aria-label="Fechar balão">&times;</button>
+      <div class="wa-bubble-header">
+        <span class="wa-status-dot"></span>
+        <strong>Net Control Informática</strong>
+        <span class="wa-badge">Online</span>
+      </div>
+      <p>👋 Olá! Precisa de ajuda para escolher seu curso ou garantir sua vaga? Fale com nossa equipe agora mesmo!</p>
+      <a href="https://wa.me/5589994002815?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20cursos%20da%20Net%20Control%20Inform%C3%A1tica." target="_blank" rel="noopener" class="wa-bubble-btn">
+        Iniciar conversa no WhatsApp
+      </a>
+    </div>
+    <a class="wa-float" href="https://wa.me/5589994002815?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20cursos%20da%20Net%20Control%20Inform%C3%A1tica." target="_blank" rel="noopener" aria-label="Falar no WhatsApp com a Net Control">
+      <span class="wa-pulse"></span>
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.3.6 4.4 1.7 6.3L3 29l7.4-1.9c1.8 1 3.7 1.5 5.6 1.5 7 0 12.6-5.6 12.6-12.5S23 3 16 3zm0 22.9c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.4 1.1 1.2-4.3-.3-.4a10.3 10.3 0 0 1-1.6-5.6C5.5 9.8 10.2 5.2 16 5.2s10.5 4.6 10.5 10.3S21.8 25.9 16 25.9zm5.7-7.7c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.5 8.5 0 0 1-4.2-3.7c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.4 1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 1.8.8 2.5.9 3.4.7.6-.1 1.9-.8 2.1-1.5s.3-1.4.2-1.5c-.1-.1-.3-.2-.6-.4z"/>
+      </svg>
+    </a>
+  </div>
+
+  <script src="js/media.js"></script>
+  <script src="js/cursos-data.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mais de 200 Cursos Profissionalizantes | Net Control Informática</title>
-  <meta name="description" content="Explore o catálogo de mais de 200 cursos da Net Control Informática: informática, Excel, design, programação, inteligência artificial, marketing, administração e muito mais.">
+  <title>Catálogo Completo: Mais de 200 Cursos | Net Control Informática</title>
+  <meta name="description" content="Explore mais de 200 cursos profissionalizantes da Net Control Informática: informática, Excel, design, programação, IA, marketing, administração e muito mais no PI, BA e MA.">
+  <meta property="og:title" content="Catálogo Completo: Mais de 200 Cursos | Net Control Informática">
+  <meta property="og:description" content="Cursos 100% práticos com certificado reconhecido. Matrículas abertas pelo WhatsApp.">
+  <meta property="og:image" content="assets/img/logo-27.jpg">
+  <meta property="og:type" content="website">
   <meta name="theme-color" content="#0A192F">
   <link rel="icon" href="assets/img/emblema-27.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,12 +18,58 @@
 </head>
 <body data-page="cursos">
 
-<main>
+  <!-- =======================================================================
+       TOPBAR & HEADER INSTITUCIONAL (Estático)
+       ======================================================================= -->
+  <a class="skip" href="#main">Ir para o conteúdo principal</a>
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <span class="topbar-badge">27 ANOS DE TRADIÇÃO</span>
+        <span>📍 Piauí · Bahia · Maranhão — Desde 1999 capacitando pessoas</span>
+      </div>
+      <div class="topbar-right">
+        <a href="https://wa.me/5589994002815?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20a%20grade%20de%20cursos%20da%20Net%20Control." target="_blank" rel="noopener">
+          <span>💬 WhatsApp:</span> <strong>(89) 99400-2815</strong>
+        </a>
+        <a href="https://www.instagram.com/netcontroloficial/" target="_blank" rel="noopener">
+          <span>📸 Instagram:</span> <strong>@netcontroloficial</strong>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <header id="siteHeader">
+    <div class="container nav">
+      <a href="index.html" class="logo" aria-label="Net Control Informática - Início">
+        <img src="assets/img/emblema-27.png" alt="Net Control 27 Anos" class="logo-emblem" width="48" height="48">
+        <span class="logo-text">Net Control<small>INFORMÁTICA · 27 ANOS</small></span>
+      </a>
+      <button class="burger" id="burgerBtn" aria-label="Abrir menu de navegação" aria-expanded="false">☰</button>
+      <nav class="menu" id="primaryMenu" aria-label="Menu principal">
+        <a href="index.html">Início</a>
+        <a href="cursos.html" class="active">Cursos (+200)</a>
+        <a href="sobre.html">Sobre a Escola</a>
+        <a href="equipe.html">Nossa Equipe</a>
+        <a href="estrutura.html">Estrutura</a>
+        <a href="resultados.html">Resultados & Formaturas</a>
+        <a href="indique.html">Indique e Ganhe</a>
+        <a href="contato.html">Contato</a>
+        <div class="header-cta">
+          <a class="btn btn-primary btn-sm" href="https://wa.me/5589994002815?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20minha%20matr%C3%ADcula%20na%20Net%20Control." target="_blank" rel="noopener">
+            Matrícula pelo WhatsApp
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+<main id="main">
   <section class="page-hero reveal">
     <div class="container">
       <span class="eyebrow" style="color:var(--green)">Catálogo Completo</span>
       <h1>Mais de <span style="color:var(--green)">200 Cursos</span> para o seu Futuro</h1>
-      <p>Do básico ao avançado, de Informática Essencial a Inteligência Artificial e Gestão. Encontre o curso perfeito para seus objetivos profissionais com aulas 100% práticas e certificado de peso.</p>
+      <p>Do básico ao avançado, de Informática Essencial a Inteligência Artificial e Gestão. Encontre o curso perfeito para seus objetivos profissionais com aulas 100% práticas e certificado de peso reconhecido.</p>
     </div>
   </section>
 
@@ -35,7 +85,7 @@
   </section>
 
   <!-- Catálogo Interativo com Filtros -->
-  <section class="bg-soft">
+  <section class="bg-soft" id="catalogo-section">
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">Pesquise e Escolha</span>
@@ -45,7 +95,7 @@
 
       <div class="toolbar reveal">
         <input id="q" type="search" placeholder="🔍 Buscar por nome do curso (ex: Excel, Python, Canva, Farmácia...)" aria-label="Buscar curso">
-        <span class="count" id="count"></span>
+        <span class="count" id="count">Mais de 200 cursos disponíveis</span>
       </div>
 
       <!-- Filter chips with 3D icons -->
@@ -57,7 +107,7 @@
       <div style="margin-top:40px;text-align:center" class="reveal">
         <p style="color:var(--text-muted);font-size:1.05rem">Não encontrou o que procura? Nossa equipe monta uma trilha personalizada para você.</p>
         <div style="margin-top:14px">
-          <a class="btn btn-primary" data-wa="Olá! Estou procurando um curso específico na Net Control e gostaria de orientação.">
+          <a class="btn btn-primary" href="https://wa.me/5589994002815?text=Ol%C3%A1!%20Estou%20procurando%20um%20curso%20espec%C3%ADfico%20na%20Net%20Control%20e%20gostaria%20de%20orienta%C3%A7%C3%A3o." target="_blank" rel="noopener">
             Falar com um Consultor Pedagógico
           </a>
         </div>
@@ -72,7 +122,7 @@
         <h2>Dúvida sobre qual curso escolher?</h2>
         <p>Converse gratuitamente com nossos especialistas. Ajudamos você a definir o melhor caminho de acordo com seu perfil e metas de renda.</p>
         <div class="actions">
-          <a class="btn btn-primary btn-lg" data-wa="Olá! Gostaria de uma consultoria gratuita para escolher meu curso na Net Control.">
+          <a class="btn btn-primary btn-lg" href="https://wa.me/5589994002815?text=Ol%C3%A1!%20Gostaria%20de%20uma%20consultoria%20gratuita%20para%20escolher%20meu%20curso%20na%20Net%20Control." target="_blank" rel="noopener">
             Quero Ajuda para Escolher
           </a>
         </div>
@@ -80,6 +130,84 @@
     </div>
   </section>
 </main>
+
+  <footer id="siteFooter">
+    <div class="container">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <a href="index.html" class="logo" aria-label="Net Control Informática">
+            <img src="assets/img/emblema-27.png" alt="Net Control 27 Anos" class="logo-emblem" width="48" height="48">
+            <span class="logo-text">Net Control<small>INFORMÁTICA · 27 ANOS</small></span>
+          </a>
+          <p><strong>“Desde o século passado capacitando pessoas.”</strong><br>
+          Fundada em 1999, a Net Control Informática une 27 anos de credibilidade comprovada ao que há de mais inovador em Inteligência Artificial, programação, dados e tecnologia no Piauí, Bahia e Maranhão.</p>
+          <div class="foot-social">
+            <a href="https://www.instagram.com/netcontroloficial/" target="_blank" rel="noopener">📸 Siga no Instagram</a>
+            <a href="https://wa.me/5589994002815?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20cursos%20da%20Net%20Control%20Inform%C3%A1tica." target="_blank" rel="noopener">💬 Fale no WhatsApp</a>
+          </div>
+        </div>
+        <div>
+          <h4>Navegação Rápida</h4>
+          <ul>
+            <li><a href="index.html">Página Inicial</a></li>
+            <li><a href="cursos.html">Catálogo de Cursos (+200)</a></li>
+            <li><a href="sobre.html">Sobre a Escola (27 Anos)</a></li>
+            <li><a href="equipe.html">Nossa Equipe & Professores</a></li>
+            <li><a href="estrutura.html">Estrutura & Laboratórios</a></li>
+            <li><a href="resultados.html">Resultados & Formaturas</a></li>
+            <li><a href="indique.html">Indique e Ganhe Comissão</a></li>
+            <li><a href="contato.html">Fale Conosco / Unidades</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Áreas de Formação</h4>
+          <ul>
+            <li><a href="cursos.html#essencial">Informática & Tecnologia (28 cursos)</a></li>
+            <li><a href="cursos.html#excel">Excel, Dados & Power BI (24 cursos)</a></li>
+            <li><a href="cursos.html#design">Design & Criação Digital (26 cursos)</a></li>
+            <li><a href="cursos.html#programacao">Web, Programação & Python (32 cursos)</a></li>
+            <li><a href="cursos.html#ia">Inteligência Artificial (18 cursos)</a></li>
+            <li><a href="cursos.html#administracao">Gestão & Administração (35 cursos)</a></li>
+            <li><a href="cursos.html">Ver catálogo completo (+200 cursos) →</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Central de Atendimento</h4>
+          <ul>
+            <li><strong>WhatsApp Oficial:</strong><br><a href="https://wa.me/5589994002815?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20cursos%20da%20Net%20Control%20Inform%C3%A1tica." target="_blank" rel="noopener">(89) 99400-2815</a></li>
+            <li><strong>Instagram:</strong><br><a href="https://www.instagram.com/netcontroloficial/" target="_blank" rel="noopener">@netcontroloficial</a></li>
+            <li><strong>Horário de Aulas & Atendimento:</strong><br>Segunda a Sexta: 08h às 21h<br>Sábado: 08h às 12h</li>
+            <li><strong>Presença Regional:</strong><br>Piauí (PI) · Bahia (BA) · Maranhão (MA)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copy">
+        © 2026 Net Control Informática. Todos os direitos reservados. Desde 1999 capacitando pessoas com excelência.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Widget Flutuante de WhatsApp -->
+  <div class="wa-widget" id="waWidget">
+    <div class="wa-bubble show" id="waBubble">
+      <button class="wa-bubble-close" id="waClose" aria-label="Fechar balão">&times;</button>
+      <div class="wa-bubble-header">
+        <span class="wa-status-dot"></span>
+        <strong>Net Control Informática</strong>
+        <span class="wa-badge">Online</span>
+      </div>
+      <p>👋 Olá! Precisa de ajuda para escolher seu curso ou garantir sua vaga? Fale com nossa equipe agora mesmo!</p>
+      <a href="https://wa.me/5589994002815?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20cursos%20da%20Net%20Control%20Inform%C3%A1tica." target="_blank" rel="noopener" class="wa-bubble-btn">
+        Iniciar conversa no WhatsApp
+      </a>
+    </div>
+    <a class="wa-float" href="https://wa.me/5589994002815?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20cursos%20da%20Net%20Control%20Inform%C3%A1tica." target="_blank" rel="noopener" aria-label="Falar no WhatsApp com a Net Control">
+      <span class="wa-pulse"></span>
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.3.6 4.4 1.7 6.3L3 29l7.4-1.9c1.8 1 3.7 1.5 5.6 1.5 7 0 12.6-5.6 12.6-12.5S23 3 16 3zm0 22.9c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.4 1.1 1.2-4.3-.3-.4a10.3 10.3 0 0 1-1.6-5.6C5.5 9.8 10.2 5.2 16 5.2s10.5 4.6 10.5 10.3S21.8 25.9 16 25.9zm5.7-7.7c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.5 8.5 0 0 1-4.2-3.7c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.4 1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 1.8.8 2.5.9 3.4.7.6-.1 1.9-.8 2.1-1.5s.3-1.4.2-1.5c-.1-.1-.3-.2-.6-.4z"/>
+      </svg>
+    </a>
+  </div>
 
 <script src="js/media.js"></script>
 <script src="js/cursos-data.js"></script>
@@ -101,7 +229,7 @@
           </div>
           <h3>${c.nome}</h3>
           <p>${c.txt}</p>
-          <a class="btn btn-primary btn-sm" data-wa="Olá! Quero saber mais sobre o curso ${c.nome} na Net Control.">
+          <a class="btn btn-primary btn-sm" href="https://wa.me/5589994002815?text=${encodeURIComponent('Olá! Quero saber mais sobre o curso de ' + c.nome + ' na Net Control.')}" target="_blank" rel="noopener">
             Quero Me Matricular
           </a>
         </div>
@@ -169,7 +297,7 @@
                 <span class="cat-label">${cat.nome}</span>
                 <h4>${name}</h4>
               </div>
-              <a class="action-link" data-wa="Olá! Gostaria de saber valores, horários e detalhes do curso ${name} na Net Control.">
+              <a class="action-link" href="https://wa.me/5589994002815?text=${encodeURIComponent('Olá! Gostaria de saber valores, horários e detalhes do curso ' + name + ' na Net Control.')}" target="_blank" rel="noopener">
                 Quero saber mais →
               </a>
             </article>
@@ -182,7 +310,7 @@
       <div style="text-align:center;padding:50px 20px;background:var(--white);border-radius:var(--radius);border:1px solid var(--border)">
         <h3 style="margin-bottom:10px">Nenhum curso encontrado com essa busca</h3>
         <p style="color:var(--text-muted);margin-bottom:20px">Tente buscar por outro termo ou converse agora com nossa equipe no WhatsApp.</p>
-        <a class="btn btn-primary" data-wa="Olá! Estou procurando um curso na Net Control que não encontrei no site.">Falar no WhatsApp</a>
+        <a class="btn btn-primary" href="https://wa.me/5589994002815?text=Ol%C3%A1!%20Estou%20procurando%20um%20curso%20na%20Net%20Control%20que%20n%C3%A3o%20encontrei%20no%20site." target="_blank" rel="noopener">Falar no WhatsApp</a>
       </div>
     `;
 

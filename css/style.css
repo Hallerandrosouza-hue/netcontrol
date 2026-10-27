@@ -1594,6 +1594,470 @@ footer a:hover {
 }
 
 /* ==========================================================================
+   FEATURED 6-COURSE GRID & TOPICS
+   ========================================================================== */
+.feat-grid-6 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+.feat-card-rich {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+.feat-card-rich:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(126,211,33,0.5);
+}
+.feat-card-rich .thumb-wrap {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--navy);
+}
+.feat-card-rich .thumb-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.feat-card-rich:hover .thumb-wrap img {
+  transform: scale(1.06);
+}
+.feat-card-rich .card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.feat-card-rich h3 {
+  font-size: 1.22rem;
+  margin-bottom: 8px;
+  color: var(--navy);
+}
+.feat-card-rich p.desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 14px;
+}
+.course-topics {
+  list-style: none;
+  margin: 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.86rem;
+  color: var(--text-main);
+  background: var(--bg-page);
+  padding: 14px;
+  border-radius: var(--radius-sm);
+  border: 1px dashed var(--border);
+}
+.course-topics li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.course-topics li::before {
+  content: "✓";
+  color: #166534;
+  background: #DCFCE7;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 0.72rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+.course-card-footer {
+  margin-top: auto;
+}
+.course-card-footer .btn {
+  width: 100%;
+}
+
+/* ==========================================================================
+   TESTIMONIALS (Depoimentos Reais de Alunos)
+   ========================================================================== */
+.testimonials-section {
+  margin-top: 50px;
+  padding-top: 50px;
+  border-top: 1px solid var(--border);
+}
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.testimonial-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition);
+}
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(0,102,204,0.3);
+}
+.testimonial-stars {
+  color: #F59E0B;
+  font-size: 1.15rem;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+.testimonial-quote {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  line-height: 1.65;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+.author-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--green), var(--blue));
+  color: var(--white);
+  font-weight: 800;
+  font-size: 1.1rem;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.author-info strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--navy);
+}
+.author-info span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  display: block;
+}
+.author-info em {
+  font-style: normal;
+  font-size: 0.78rem;
+  color: var(--blue);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   ALUNO APRENDIZ JOURNEY CARD (2ª Coluna)
+   ========================================================================== */
+.journey-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  backdrop-filter: blur(10px);
+  color: var(--white);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.3);
+}
+.journey-card h3 {
+  color: var(--white);
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.journey-card p.subtitle {
+  color: #CBD5E1;
+  font-size: 0.92rem;
+  margin-bottom: 24px;
+}
+.journey-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+.journey-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--green);
+}
+.journey-step .step-num {
+  background: var(--green);
+  color: var(--navy);
+  font-weight: 800;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 0.82rem;
+  flex-shrink: 0;
+}
+.journey-step .step-text strong {
+  display: block;
+  font-size: 0.94rem;
+  color: var(--white);
+  margin-bottom: 2px;
+}
+.journey-step .step-text span {
+  font-size: 0.82rem;
+  color: #CBD5E1;
+  line-height: 1.4;
+}
+.benefit-pills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+.benefit-pill {
+  background: rgba(126,211,33,0.18);
+  border: 1px solid rgba(126,211,33,0.4);
+  color: var(--green);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+}
+.journey-photos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.journey-photos-grid .item {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  aspect-ratio: 1;
+  cursor: zoom-in;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+.journey-photos-grid .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+.journey-photos-grid .item:hover img {
+  transform: scale(1.1);
+}
+
+/* ==========================================================================
+   SIMULADOR / INDIQUE E GANHE VISUAL CARD (2ª Coluna)
+   ========================================================================== */
+.simulator-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-lg);
+  border: 2px solid #E2E8F0;
+  position: relative;
+  overflow: hidden;
+}
+.simulator-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--green), var(--blue));
+}
+.simulator-card h3 {
+  font-size: 1.35rem;
+  color: var(--navy);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.simulator-card p.sim-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 22px;
+}
+.sim-steps-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.sim-step-item {
+  background: var(--bg-page);
+  padding: 12px 10px;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  border: 1px solid var(--border);
+}
+.sim-step-icon {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+.sim-step-item strong {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--navy);
+}
+.sim-step-item span {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+.earnings-table {
+  background: linear-gradient(135deg, #0A192F, #112D55);
+  color: var(--white);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 22px;
+}
+.earnings-table-header {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--green);
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+.earnings-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.88rem;
+}
+.earnings-row:last-child {
+  border-bottom: none;
+}
+.earnings-row.highlight {
+  background: rgba(126,211,33,0.14);
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(126,211,33,0.3);
+  margin-top: 6px;
+  font-weight: 700;
+}
+.earnings-row .val {
+  color: var(--green);
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+.sim-photos-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.sim-photos-row .item {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  border: 1px solid var(--border);
+}
+.sim-photos-row .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   CARDS RICOS DE PRESENÇA REGIONAL (PI, BA, MA)
+   ========================================================================== */
+.uf-card-rich {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 30px 26px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition);
+}
+.uf-card-rich:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--blue);
+}
+.uf-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.uf-badge-large {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 2.2rem;
+  color: var(--blue);
+  line-height: 1;
+}
+.uf-students-count {
+  background: var(--green-light);
+  color: #166534;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+.uf-card-rich h3 {
+  font-size: 1.3rem;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.uf-card-rich p.history {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 16px;
+}
+.uf-cities-box {
+  background: var(--bg-page);
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  margin-bottom: 20px;
+}
+.uf-cities-box strong {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--navy);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  letter-spacing: 0.05em;
+}
+.uf-cities-list {
+  font-size: 0.82rem;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+.uf-card-rich .btn {
+  width: 100%;
+}
+
+/* ==========================================================================
    SCROLL REVEAL ANIMATIONS
    ========================================================================== */
 .reveal {
@@ -1611,6 +2075,8 @@ footer a:hover {
    ========================================================================== */
 @media (max-width: 1080px) {
   .categories-grid { grid-template-columns: repeat(3, 1fr); }
+  .feat-grid-6 { grid-template-columns: repeat(2, 1fr); }
+  .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
   .stats { grid-template-columns: repeat(2, 1fr); }
   .differentials-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -1625,6 +2091,8 @@ footer a:hover {
   .photo { max-width: 100%; }
   .cgrid { grid-template-columns: repeat(2, 1fr); }
   .categories-grid { grid-template-columns: repeat(2, 1fr); }
+  .feat-grid-6 { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
   .foot-grid { grid-template-columns: 1fr 1fr; }
   
   .burger {
@@ -1670,9 +2138,11 @@ footer a:hover {
   .gallery { grid-template-columns: 1fr; }
   .foot-grid { grid-template-columns: 1fr; }
   .cta { padding: 40px 20px; text-align: center; }
-  .hero-pill-badge { display: none; } /* hide floating pills on small screens to prevent clipping */
+  .hero-pill-badge { display: none; }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { width: 100%; }
+  .sim-steps-row { grid-template-columns: 1fr; }
+  .journey-photos-grid { grid-template-columns: repeat(2, 1fr); }
   .wa-widget { right: 14px; bottom: 14px; }
   .wa-bubble { max-width: 260px; padding: 14px 14px 12px; }
   .wa-float { width: 56px; height: 56px; }
